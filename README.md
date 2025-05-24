@@ -3,7 +3,7 @@
 **Chat Compagnie** est un **projet fictif** conçu pour démontrer mes compétences en **développement web front-end**, en **design responsive** et en **intégration d'outils tiers** comme EmailJS.  
 Il s'agit d'un site vitrine imaginé pour une association de protection animale spécialisée dans l'adoption de chats.
 
-🎯 Objectif : valoriser mes compétences techniques et esthétiques dans un contexte professionnel réaliste.
+Objectif : valoriser mes compétences techniques et esthétiques dans un contexte professionnel réaliste.
 
 🔗 [Voir la démo en ligne](https://boughrara-soumaiya.github.io/chat-compagnie.github.com/)
 
