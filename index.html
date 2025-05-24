@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chats & Compagnie</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+<header class="navbar">
+  <div class="nav-logo">Chats & Compagnie</div>
+  <nav class="nav-links">
+    <a href="#">Accueil</a>
+    <a href="#">À propos</a>
+    <a href="#">Nos actions</a>
+    <a href="#">Adoptions</a>
+    <a href="#">Équipe</a>
+    <a href="#">Contact</a>
+  </nav>
+  <div class="burger" id="burger">
+    <div></div> 
+    <div></div> 
+    <div></div> 
+  </div>
+</header>
+
+
+<script>const burger = document.getElementById('burger');
+const navLinks = document.querySelector('.nav-links');
+
+burger.addEventListener('click', () => {
+  navLinks.classList.toggle('active');
+  burger.classList.toggle('active');
+});
+</script>
+
+<main>
+<section class="hero-cat">  
+    <div class="moving-text-wrapper">
+  <div class="moving-text">CHAT CHAT CHAT CHAT</div>
+</div>
+  <div class="hero-gallery"> 
+    <img src="image/portrait 1.jpg" alt="portrait 1" />
+    <img src="image/portrait 2.jpg" alt="portrait 2" class="center" />
+    <img src="image/portrait 5.jpg" alt="portrait 3" />
+  
+  </div>
+
+  <div class="hero-text">
+      <p>Rejoignez notre communauté passionnée<br> pour offrir amour et soin à nos amis félins<br> avec <span class="logo-font">Chats & Compagnie</span></p>
+      <a href="#" class="hero-btn">EN SAVOIR PLUS</a>
+    </div>
+
+</section>
+
+<section class="cat-actions">
+  <div class="action-item">
+    <img src="image/chat-adoption.jpg" alt="Adoption de chats">
+    <h3>ADOPTION</h3>
+  </div>
+  <div class="action-item">
+    <img src="image/chat-nourriture.jpg" alt="Aide alimentaire">
+    <h3>NOURRITURE</h3>
+  </div>
+  <div class="action-item">
+    <img src="image/chat-soins.jpg" alt="Soins vétérinaires">
+    <h3>SOINS</h3>
+  </div>
+  <div class="action-item">
+    <img src="image/chat-abandon.jpg" alt="Lutte contre l'abandon">
+    <h3>SAUVETAGE</h3>
+  </div>
+</section>
+
+ <section class="section-croyance">
+     <div class="texte">
+    <div class="ligne">NOUS CROYONS</div>
+    <div class="ligne">QUE LES 
+      <span class="highlight">
+        <img src="image/portrait 3.jpg" alt="chat" class="image-lettre"> 
+        CHATS
+      </span>
+    </div>
+    <div class="ligne">MÉRITENT UN FOYER</div>
+    <div class="ligne">SÛR ET 
+      <span class="highlight">
+        <img src="image/portrait 4.jpg" alt="chat" class="image-lettre"> 
+        AIMANT.
+      </span>
+    </div>
+    <div class="derniere-ligne">  <p class="ligne-slogan">
+      Un petit geste peut changer leur monde 
+      <span class="pattes-de-chat"> 🐾</span>
+    </p></div>
+  </div>
+</section>
+
+<section class="section-stats">
+  <div class="container-stats">
+    <div class="intro">
+      <h2>Ensemble, aidons les chats à retrouver un foyer</h2>
+      <p>Notre association s'engage chaque jour pour offrir une seconde chance aux chats abandonnés. Grâce à votre soutien, nous faisons la différence sur le terrain.</p>
+    </div>
+    <div class="stats-grid">
+      <div class="stat-item">
+        <h3>25%</h3>
+        <strong>d’animaux sauvés en plus</strong>
+        <p>Depuis l’an dernier, nos sauvetages ont augmenté grâce aux dons et bénévoles engagés.</p>
+      </div>
+      <div class="stat-item">
+        <h3>64</h3>
+        <strong>familles d’accueil</strong>
+        <p>Des foyers chaleureux pour accueillir temporairement nos petits protégés en attente d’adoption.</p>
+      </div>
+      <div class="stat-item">
+        <h3>40K</h3>
+        <strong>repas distribués</strong>
+        <p>Des milliers de repas offerts aux chats errants ou recueillis par nos équipes.</p>
+      </div>
+      <div class="stat-item">
+        <h3>84%</h3>
+        <strong>taux d’adoption</strong>
+        <p>Une grande majorité de nos chats trouvent une famille aimante dans les 3 mois.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section-contact">
+  <div class="container-contact">
+    <h2>Contactez-nous</h2>
+    <p>Une question, une envie d’adopter ou de devenir bénévole ? Envoyez-nous un message, nous serons ravis de vous répondre !</p>
+
+    <form class="contact-form" id="contact-form">
+      <div class="form-group">
+        <label for="name">Nom</label>
+        <input type="text" id="name" name="user_name" required placeholder="Votre nom" />
+      </div>
+      <div class="form-group">
+        <label for="email">Adresse e-mail</label>
+        <input type="email" id="email" name="user_email" required placeholder="Votre e-mail" />
+      </div>
+      <div class="form-group">
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="5" required placeholder="Votre message..."></textarea>
+      </div>
+      <button type="submit" class="btn-submit">Envoyer</button>
+    </form>
+
+    <p id="status-message"></p>
+  </div>
+</section>
+
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script>
+  window.addEventListener('DOMContentLoaded', function () {
+    emailjs.init("PsasXqj9H3F0U5Ozy"); 
+
+    const form = document.getElementById('contact-form');
+    const statusMsg = document.getElementById('status-message');
+
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+
+      emailjs.sendForm("service_mrhcbym", "template_vvd03nw", this)
+        .then(() => {
+          statusMsg.innerText = "Message envoyé avec succès !";
+          statusMsg.style.color = "black";
+          form.reset();
+        }, (error) => {
+          console.error("Erreur EmailJS :", error);
+          statusMsg.innerText = "Erreur lors de l’envoi. Veuillez réessayer.";
+          statusMsg.style.color = "red";
+        });
+    });
+  });
+</script>
+
+
+
+</main>
+<footer class="footer">
+  <div class="footer-wrapper">
+    <div class="footer-left">
+      <h2 class="footer-logo">Chats & Compagnie</h2>
+      <p class="footer-subtext">Inscrivez-vous à notre newsletter</p>
+      <form class="footer-form">
+        <input type="email" placeholder="Votre email" required>
+        <button type="submit">→</button>
+      </form>
+      <div class="footer-social">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-telegram-plane"></i></a>
+        <a href="#"><i class="fab fa-whatsapp"></i></a>
+        <a href="#"><i class="fab fa-youtube"></i></a>
+        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+      </div>
+    </div>
+
+    <div class="footer-columns">
+      <div class="footer-column">
+        <h4>A propos</h4>
+        <a href="#">Notre mission</a>
+        <a href="#">Notre équipe</a>
+        <a href="#">Nos refuges</a>
+        <a href="#">Nos partenaires</a>
+      </div>
+      <div class="footer-column">
+        <h4>Adoption</h4>
+        <a href="#">Chats à adopter</a>
+        <a href="#">Processus d'adoption</a>
+        <a href="#">Parrainer un chat</a>
+        <a href="#">Success stories</a>
+      </div>
+      <div class="footer-column">
+        <h4>Soutien</h4>
+        <a href="#">Faire un don</a>
+        <a href="#">Devenir bénévole</a>
+        <a href="#">Offrir du matériel</a>
+        <a href="#">Entreprise solidaire</a>
+      </div>
+      <div class="footer-column">
+        <h4>Ressources</h4>
+        <a href="#">FAQ</a>
+        <a href="#">Conseils & soins</a>
+        <a href="#">Mentions légales</a>
+        <a href="#">Politique de confidentialité</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2025 Chats & Compagnie – Association loi 1901. Tous droits réservés.</p>
+    <span class="footer-credit">Site propulsé avec amour pour nos félins 🐾 - Boughrara Soumaiya</span>
+  </div>
+</footer>
+</body>
+</html>
