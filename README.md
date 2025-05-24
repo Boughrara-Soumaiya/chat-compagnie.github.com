@@ -7,12 +7,10 @@ Il s'agit d'un site vitrine imaginé pour une association de protection animale 
 
 🔗 [Voir la démo en ligne](https://boughrara-soumaiya.github.io/chat-compagnie.github.com/)
 
----
 
 ##  Technologies utilisées
 
  **HTML5**, **CSS3**,  **JavaScript**, **EmailJS (v4)**
-___
 
 ## À propos du projet
 
@@ -20,7 +18,6 @@ ___
 Il ne représente pas une organisation réelle.
 
  **Autrice** : Soumaiya Boughrara  
----
 
 ##  Licence
 
